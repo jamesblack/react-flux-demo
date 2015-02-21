@@ -7,10 +7,10 @@ var ReactRouter = require("react-router");
 
 router.get("*", function(req, res, next) {
   var application = require("../app/Main.jsx");
-
+  var props = {};
   ReactRouter.run(application, req.path, function(Handler, state) {
-    var html = React.renderToString(React.createElement(Handler, {}));
-    res.render('index', {html: html});
+    var html = React.renderToString(React.createElement(Handler, props));
+    res.render('index', {html: html, props: props});
   });
 });
 

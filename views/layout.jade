@@ -2,7 +2,12 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body#application
     block content
+    - if (props)
+      script.
+        window.ApplicationProps = #{ JSON.stringify(props) }
     script(src="/javascripts/bundle.js")

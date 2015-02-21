@@ -8,12 +8,16 @@ var RouteHandler = Router.RouteHandler;
 
 var Header = require("./views/Layout/Header.jsx");
 
+var About = require("./views/Static/About.jsx");
+var Ballot = require("./views/Ballot/Ballot.jsx");
+var Foods = require("./views/Foods/Foods.jsx");
+
 var App = React.createClass({
   render: function() {
     return (
       <div className="App">
         <Header />
-        <main>
+        <main className="container-fluid">
           <RouteHandler />
         </main>
       </div>
@@ -23,7 +27,9 @@ var App = React.createClass({
 
 var routes = (
   <Route name="app" path="/" handler={App}>
-
+    <DefaultRoute handler={About} />
+    <Route path="/ballots" handler={Ballot} />
+    <Route path="/foods" handler={Foods} />
   </Route>
   );
 

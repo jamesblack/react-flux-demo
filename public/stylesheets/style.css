@@ -1,8 +1,16 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.App > main {
+  margin-top: 80px;
 }
 
-a {
-  color: #00B7FF;
+/* Hacks my stupid food creation form for selects inline */
+.form-group label {
+    float: left;
+    text-align: left;
+    font-weight: normal;
+}
+
+.form-group select {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
 }
