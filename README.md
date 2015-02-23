@@ -5,10 +5,10 @@ and solve the age old problem of how to get some food choices when Great Harvest
 
 ## How to Run
 
-'''npm start'''
+```npm start```
 
 ## How to Develop
 
-'''nodedev ./bin/www'''
+```nodedev ./bin/www```
 
-'''webpack --watch'''
+```webpack --watch```
